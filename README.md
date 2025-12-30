@@ -16,24 +16,35 @@ The result: Claude writes better code the first time and catches more issues dur
 
 ## Quick Start
 
-### Step 1: Get the Template
+### Option A: New Project (Recommended)
 
-Click the green **"Use this template"** button above, or:
+**Step 1:** Click the green **"Use this template"** button at the top of this page → **"Create a new repository"**
+
+**Step 2:** Name your repository (e.g., `my-awesome-app`) and click **"Create repository"**
+
+**Step 3:** Clone YOUR new repository to your computer:
 
 ```bash
-git clone https://github.com/asspenwhite/claude-code-project-template.git my-project
-cd my-project
+# Replace YOUR-USERNAME and your-repo-name with your actual values
+git clone https://github.com/YOUR-USERNAME/your-repo-name.git
+
+# Example:
+git clone https://github.com/johndoe/my-awesome-app.git
 ```
 
-### Step 2: Run Claude Code
+**Step 4:** Open a terminal IN your project folder:
+
+```bash
+cd my-awesome-app    # <- Use YOUR folder name
+```
+
+**Step 5:** Start Claude Code:
 
 ```bash
 claude
 ```
 
-### Step 3: Tell Claude Your Project
-
-Paste this prompt and fill in your details:
+**Step 6:** Paste this prompt (fill in your details):
 
 ```
 Customize this template for my project:
@@ -49,9 +60,36 @@ Customize this template for my project:
 Update CLAUDE.md, customize the skills and agents for my project, and create initial docs.
 ```
 
-Claude will customize everything for your project.
+Claude reads the template files and customizes everything for your project.
 
-### Step 4: Install MCP Servers (Optional)
+---
+
+### Option B: Add to Existing Project
+
+If you already have a project and want to add the Claude Code configuration:
+
+```bash
+# Navigate to your existing project
+cd /path/to/your/existing-project
+
+# Download just the .claude folder and docs
+git clone --depth 1 https://github.com/asspenwhite/claude-code-project-template.git temp-template
+cp -r temp-template/.claude ./
+cp -r temp-template/docs ./
+cp temp-template/QUICKSTART.md ./
+rm -rf temp-template
+
+# Start Claude Code
+claude
+```
+
+Then paste the customization prompt above.
+
+---
+
+### After Setup: Install MCP Servers (Optional)
+
+Run these in your project folder to add useful integrations:
 
 ```bash
 # Browser automation for testing
@@ -64,7 +102,9 @@ claude mcp add shadcn -- npx -y @anthropic-ai/shadcn-mcp@latest
 claude mcp add context7 -- npx -y @anthropic-ai/context7-mcp@latest
 ```
 
-See [QUICKSTART.md](QUICKSTART.md) for more examples and detailed prompts.
+---
+
+See [QUICKSTART.md](QUICKSTART.md) for more example prompts.
 
 ---
 
