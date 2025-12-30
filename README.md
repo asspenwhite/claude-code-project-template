@@ -16,65 +16,55 @@ The result: Claude writes better code the first time and catches more issues dur
 
 ## Quick Start
 
-### Option A: Tell Claude What You're Building (Recommended)
+### Step 1: Get the Template
 
-Just describe your project and Claude customizes everything:
+Click the green **"Use this template"** button above, or:
+
+```bash
+git clone https://github.com/asspenwhite/claude-code-project-template.git my-project
+cd my-project
+```
+
+### Step 2: Run Claude Code
+
+```bash
+claude
+```
+
+### Step 3: Tell Claude Your Project
+
+Paste this prompt and fill in your details:
 
 ```
-I'm starting a new project using the Claude Code project template.
+Customize this template for my project:
 
-**Project Name:** My App
-**Description:** [What it does]
-**Tech Stack:** [Your stack]
+**Project Name:** [Your app name]
+**Description:** [What it does in 1-2 sentences]
+**Tech Stack:** [e.g., Next.js 14, Supabase, Stripe, Tailwind]
 **Key Features:**
-1. Feature 1
-2. Feature 2
+1. [Feature 1]
+2. [Feature 2]
+3. [Feature 3]
 
-Please customize the template for my project.
+Update CLAUDE.md, customize the skills and agents for my project, and create initial docs.
 ```
 
-See [QUICKSTART.md](QUICKSTART.md) for detailed prompts and examples.
+Claude will customize everything for your project.
 
-### Option B: Manual Setup
-
-#### 1. Copy the `.claude/` folder to your project
+### Step 4: Install MCP Servers (Optional)
 
 ```bash
-cp -r .claude/ your-project/.claude/
-```
-
-#### 2. Copy and customize `CLAUDE.md`
-
-```bash
-cp docs/CLAUDE.md.example your-project/CLAUDE.md
-```
-
-Edit it to match your project's specifics.
-
-#### 3. Install MCP servers (optional but recommended)
-
-```bash
-# Browser automation for visual testing
+# Browser automation for testing
 claude mcp add playwright -- npx @anthropic/mcp-playwright
 
-# UI component library
+# UI components
 claude mcp add shadcn -- npx -y @anthropic-ai/shadcn-mcp@latest
 
 # Up-to-date library docs
 claude mcp add context7 -- npx -y @anthropic-ai/context7-mcp@latest
 ```
 
-### 4. Start using
-
-```bash
-# Skills auto-activate when relevant
-# Just start coding - frontend-design skill activates for UI work
-
-# Run agents via commands
-claude /security-audit
-claude /code-review
-claude /design-review
-```
+See [QUICKSTART.md](QUICKSTART.md) for more examples and detailed prompts.
 
 ---
 
