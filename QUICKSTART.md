@@ -32,20 +32,20 @@ Start by reading the template files in .claude/ and docs/, then customize everyt
 
 ---
 
-## Example: Car Blog
+## Example: Recipe App
 
 ```
 I'm starting a new project using the Claude Code project template. Here's what I'm building:
 
-**Project Name:** Super Bay Factory
-**Description:** A Speedhunters-style automotive blog featuring car builds, shop tours, and automotive journalism. Photographers can upload work and earn royalties when their photos are used in articles.
-**Tech Stack:** Next.js 14, Supabase, Stripe (for photographer payouts), Tailwind, shadcn/ui
-**Target Users:** Car enthusiasts, automotive photographers, people who love JDM/Euro car culture
+**Project Name:** MealPrep Pro
+**Description:** A meal planning app where users can save recipes, generate weekly meal plans, and create shopping lists automatically.
+**Tech Stack:** Next.js 14, Supabase, Tailwind, shadcn/ui
+**Target Users:** Home cooks, busy families, health-conscious individuals
 **Key Features:**
-1. Article CMS with rich media support
-2. Photographer portal with royalty tracking
-3. Reddit-style comment system with user accounts
-4. Staff/contributor profiles with social links
+1. Recipe management with nutritional info
+2. Weekly meal planner with drag-and-drop
+3. Auto-generated shopping lists
+4. User accounts with saved favorites
 
 Please customize the template for my project...
 ```
