@@ -72,6 +72,8 @@ Instead of basic Claude Code, this template adds:
 
 **Step 1:** Click the green **"Use this template"** button at the top of this page → **"Create a new repository"**
 
+> This creates a new repo in YOUR GitHub account with all the template files already copied.
+
 **Step 2:** Name your repository (e.g., `my-awesome-app`) and click **"Create repository"**
 
 **Step 3:** Clone YOUR new repository to your computer:
