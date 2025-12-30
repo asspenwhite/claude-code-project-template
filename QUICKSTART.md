@@ -1,6 +1,12 @@
 # Quick Start: Initialize Your Project
 
-Copy this prompt and paste it to Claude Code to set up your project:
+After cloning the template (see README.md), open your terminal in the project folder and run:
+
+```bash
+claude
+```
+
+This opens an interactive chat with Claude. **Paste the prompt below** and Claude will customize everything for your project:
 
 ---
 

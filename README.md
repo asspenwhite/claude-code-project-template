@@ -1,16 +1,68 @@
 # Claude Code Project Template
 
-A production-grade template for configuring Claude Code with Skills, Agents, and Commands based on [Anthropic's research](https://www.anthropic.com/engineering/claude-code-best-practices).
+A ready-to-use configuration for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) that makes AI-assisted coding significantly better.
 
-## Why This Template?
+---
 
-Most Claude Code setups are basic. This template implements the **Skills + Agents + Commands** architecture that Anthropic's research shows produces better results:
+## What is Claude Code?
 
-- **Skills** auto-activate during code **creation** to prevent mistakes
-- **Agents** are invoked manually for **review** to catch issues
-- **Commands** provide human-readable ways to run agents
+**Claude Code** is Anthropic's official command-line tool that lets you code with Claude AI directly in your terminal. Instead of copying/pasting code from a chat window, Claude Code can:
 
-The result: Claude writes better code the first time and catches more issues during review.
+- Read and write files in your project
+- Run terminal commands
+- Browse the web for documentation
+- Test your app in a real browser
+
+**This template** configures Claude Code with best practices so it writes better code and catches more issues.
+
+---
+
+## Prerequisites
+
+Before using this template, you need:
+
+### 1. Claude Code CLI (Required)
+
+Install Claude Code globally:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+Then authenticate:
+
+```bash
+claude auth
+```
+
+> Don't have Node.js? [Download it here](https://nodejs.org/) (LTS version recommended)
+
+### 2. Git (Required)
+
+You need Git to clone repositories. Check if you have it:
+
+```bash
+git --version
+```
+
+> Don't have Git? [Download it here](https://git-scm.com/downloads)
+
+### 3. A Code Editor
+
+Any editor works: VS Code, Cursor, Sublime, etc.
+
+---
+
+## What This Template Does
+
+Instead of basic Claude Code, this template adds:
+
+| Feature | What It Does |
+|---------|--------------|
+| **Skills** | Auto-activate when relevant to prevent common mistakes (bad UI patterns, security issues) |
+| **Agents** | Manual review workflows that catch issues before you ship |
+| **Commands** | Simple `/slash-commands` to run agents (like `/security-audit`) |
+| **Docs Workflow** | Auto-maintains CHANGELOG, TODO, and architecture docs |
 
 ---
 
@@ -87,18 +139,20 @@ Then paste the customization prompt above.
 
 ---
 
-### After Setup: Install MCP Servers (Optional)
+### After Setup: Install MCP Servers (Optional but Recommended)
 
-Run these in your project folder to add useful integrations:
+**What are MCP Servers?** They're plugins that give Claude Code extra abilities - like controlling a browser, accessing component libraries, or reading documentation.
+
+Run these in your project folder:
 
 ```bash
-# Browser automation for testing
+# Playwright - Lets Claude control a browser to test your app visually
 claude mcp add playwright -- npx @anthropic/mcp-playwright
 
-# UI components
+# shadcn/ui - Gives Claude access to the shadcn component library
 claude mcp add shadcn -- npx -y @anthropic-ai/shadcn-mcp@latest
 
-# Up-to-date library docs
+# Context7 - Gives Claude up-to-date docs for popular libraries
 claude mcp add context7 -- npx -y @anthropic-ai/context7-mcp@latest
 ```
 

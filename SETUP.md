@@ -2,26 +2,39 @@
 
 Step-by-step instructions for setting up Claude Code with this template.
 
+> **New here?** Start with the [README.md](README.md) which has the Quick Start guide.
+
 ---
 
 ## Prerequisites
 
-- [Claude Code CLI](https://claude.ai/code) installed
-- A project you want to configure
-- (Optional) Node.js for MCP servers
+1. **Node.js** - [Download here](https://nodejs.org/) (LTS version)
+2. **Claude Code CLI** - Install with: `npm install -g @anthropic-ai/claude-code`
+3. **Authenticate** - Run: `claude auth`
 
 ---
 
-## Step 1: Copy Template Files
+## Step 1: Get the Template
 
-Copy the `.claude/` folder to your project root:
+**Option A: Use GitHub's Template Feature (Recommended)**
+
+Click "Use this template" on GitHub to create your own copy.
+
+**Option B: Clone Directly**
 
 ```bash
-# Clone this template
-git clone https://github.com/YOUR_USERNAME/claude-code-project-template.git
+git clone https://github.com/asspenwhite/claude-code-project-template.git my-project
+cd my-project
+```
 
-# Copy to your project
-cp -r claude-code-project-template/.claude/ your-project/.claude/
+**Option C: Add to Existing Project**
+
+```bash
+# From your existing project folder
+git clone --depth 1 https://github.com/asspenwhite/claude-code-project-template.git temp
+cp -r temp/.claude ./
+cp -r temp/docs ./
+rm -rf temp
 ```
 
 ---

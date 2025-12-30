@@ -34,6 +34,8 @@ Load agent: .claude/agents/design-review-agent.md
 
 ## Usage Examples
 
+Type these commands **inside Claude Code** (after running `claude` in your terminal):
+
 ```bash
 # Review a specific component
 /design-review src/components/Header.tsx
