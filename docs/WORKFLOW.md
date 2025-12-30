@@ -188,8 +188,8 @@ User states, routing logic, and application flow.
 |-------|-------------|-------------|----------|
 | visitor | Not logged in | No | No |
 | registered | Has account | Yes | No |
-| enrolled | Paid customer | Yes | Yes |
-| completed | Finished course | Yes | Yes |
+| subscribed | Paid customer | Yes | Yes |
+| churned | Cancelled subscription | Yes | No |
 
 ---
 
