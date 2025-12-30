@@ -1,0 +1,101 @@
+# [Your Project Name] - AI Assistant Instructions
+
+[Brief description of your project. What it does, who it's for.]
+
+- **Tech Stack:** [Next.js 14 / React / etc.]
+- **Database:** [Supabase / PostgreSQL / etc.]
+- **Status:** [Development / Beta / Production]
+
+---
+
+## Required Reading
+
+Before any task, read the relevant documentation:
+
+| Doc | When to Read |
+|-----|--------------|
+| `docs/TODO.md` | Check first - active tasks |
+| `docs/API.md` | Before API changes |
+| `docs/SCHEMA.md` | Before database changes |
+
+---
+
+## Key Directories
+
+```
+src/app/          # Next.js pages
+src/app/api/      # API routes
+src/components/   # React components
+src/lib/          # Utilities
+docs/             # Documentation
+```
+
+---
+
+## Critical Rules
+
+### [Category 1 - e.g., Authentication]
+
+```typescript
+// ALWAYS do this
+import { checkAuth } from '@/lib/auth'
+
+// NEVER do this
+// Don't trust client-side auth state
+```
+
+### [Category 2 - e.g., Database]
+
+```typescript
+// Use server client for mutations
+import { createServerClient } from '@/lib/db/server'
+```
+
+---
+
+## Running the App
+
+```bash
+# Development
+npm run dev
+
+# Production build
+npm run build && npm start
+
+# With Docker
+docker compose up -d
+```
+
+---
+
+## MCP Servers
+
+Use these tools instead of guessing:
+
+| Task | MCP Tool |
+|------|----------|
+| Visual testing | `mcp__playwright__browser_*` |
+| UI components | `mcp__shadcn__*` |
+| Library docs | `mcp__context7__*` |
+
+---
+
+## Documentation Updates
+
+After changes, update:
+
+- `docs/CHANGELOG.md` - Under [Unreleased]
+- `docs/TODO.md` - Mark completed items
+- `docs/API.md` - If API changed
+
+---
+
+## Important Notes
+
+1. [Project-specific note 1]
+2. [Project-specific note 2]
+3. [Project-specific note 3]
+
+---
+
+*Last updated: [Date]*
