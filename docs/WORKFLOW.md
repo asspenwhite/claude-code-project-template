@@ -22,6 +22,16 @@ This template enforces a **docs-as-code** workflow:
 
 Your project should have these files in `docs/`:
 
+| File | Purpose | Template |
+|------|---------|----------|
+| `README.md` | Project overview, setup, scripts | [PROJECT_README.template.md](templates/PROJECT_README.template.md) |
+| `CHANGELOG.md` | Version history | [CHANGELOG.template.md](templates/CHANGELOG.template.md) |
+| `TODO.md` | Active tasks by priority | [TODO.template.md](templates/TODO.template.md) |
+| `DECISIONS.md` | Architectural decisions with context | [DECISIONS.template.md](templates/DECISIONS.template.md) |
+| `API.md` | API routes, requests, responses | [API.template.md](templates/API.template.md) |
+| `SCHEMA.md` | Database tables, RLS, queries | [SCHEMA.template.md](templates/SCHEMA.template.md) |
+| `LOGIC_AUDIT.md` | User states, page logic, edge cases | [LOGIC_AUDIT.template.md](templates/LOGIC_AUDIT.template.md) |
+
 ```
 docs/
 ├── README.md        # Project overview
@@ -31,8 +41,20 @@ docs/
 ├── API.md           # API documentation
 ├── SCHEMA.md        # Database schema
 ├── LOGIC_AUDIT.md   # User flow documentation
-└── MCP.md           # MCP server guide
+└── templates/       # Templates to copy from
 ```
+
+### Using Templates
+
+Copy templates to start each doc:
+
+```bash
+cp docs/templates/TODO.template.md docs/TODO.md
+cp docs/templates/DECISIONS.template.md docs/DECISIONS.md
+# etc.
+```
+
+Or let Claude create them when you run the customization prompt.
 
 ---
 
