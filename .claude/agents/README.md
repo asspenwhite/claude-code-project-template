@@ -1,6 +1,16 @@
 # Claude Code Agents
 
-Agents are specialized reviewers you invoke manually via slash commands.
+Agents are specialized reviewers you invoke manually via `/command`.
+
+## Skills vs Agents
+
+| Aspect | Skills | Agents |
+|--------|--------|--------|
+| **Activation** | Automatic | Manual (`/command`) |
+| **Purpose** | Prevention during work | Review after work |
+| **Scope** | Rules always applied | Comprehensive audits |
+
+**Core rules are now in skills (auto-load).** Agents provide deeper review workflows when you want a comprehensive audit. Use skills for ongoing protection, agents for thorough reviews.
 
 ---
 
